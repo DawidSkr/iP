@@ -132,6 +132,40 @@
     text-align: center;
 }
 
+.repair-options {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.toggle-btn {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #d1d1d1;
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: auto;
+    margin-top: 0;
+}
+
+.toggle-btn:hover {
+    background: #353535;
+    border-color: #666;
+}
+
+.toggle-btn.active {
+    background: #1f8f4d;
+    border-color: #1f8f4d;
+    color: white;
+    box-shadow: 0 0 10px rgba(31, 143, 77, 0.4);
+}
+
 </style>
 </head>
 <body>
@@ -153,7 +187,17 @@
 
   <div id="results"></div>
 
-  <div class="version">Wersja: 04.2026</div>
+  <div class="repair-options">
+    <button type="button" class="toggle-btn" id="batteryBtn">
+        🔋 Bateria
+    </button>
+
+    <button type="button" class="toggle-btn" id="lcdBtn">
+        📱 LCD
+    </button>
+  </div>
+
+  <div class="version">Wersja: 05.2026</div>
 </div>
 
 <script src="script.js"></script>
